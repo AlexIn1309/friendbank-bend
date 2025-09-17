@@ -25,5 +25,5 @@ futures-util = "0.3"
 vercel_runtime = "1.1.4"
 
 [[bin]]
-name = "friendbank"
+name = "deposit"
 path = "api/main.rs"

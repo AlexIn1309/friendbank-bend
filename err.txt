@@ -1,0 +1,42 @@
+warning: field `username` is never read
+  --> src/models.rs:15:9
+   |
+13 | pub struct User {
+   |            ---- field in this struct
+14 |     pub id: i32,
+15 |     pub username: String,
+   |         ^^^^^^^^
+   |
+   = note: `User` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis
+   = note: `#[warn(dead_code)]` on by default
+
+warning: field `user_id` is never read
+  --> src/models.rs:23:9
+   |
+21 | pub struct Account {
+   |            ------- field in this struct
+22 |     pub id: i32,
+23 |     pub user_id: i32,
+   |         ^^^^^^^
+   |
+   = note: `Account` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis
+
+warning: function `verify_accountant_role` is never used
+  --> src/middleware/jwt_auth.rs:47:14
+   |
+47 | pub async fn verify_accountant_role(
+   |              ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: `friendbank` (bin "friendbank") generated 3 warnings
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.08s
+     Running `target/debug/friendbank`
+DATABASE_URL: Ok("mysql://rust_user:cdfslADNsZp0Fa3X@localhost/friendbank")
+Connected to the database succesfully!
+DEBUG: Petición de retiro recibida.
+DEBUG: Llamando al servicio de retiro.
+DEBUG: Iniciando servicio de depósito.
+DEBUG: Transacción de base de datos iniciada.
+DEBUG: Usuario receptor encontrado con ID: 2
+DEBUG: Monto de depósito convertido a Decimal.
+DEBUG: Saldo de la cuenta actualizado con éxito.
+ERROR: Fallo al registrar la transacción: Database(MySqlDatabaseError { code: Some("23000"), number: 1048, message: "Column 'sender_id' cannot be null" })

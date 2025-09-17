@@ -26,4 +26,4 @@ vercel_runtime = "1.1.4"
 
 [[bin]]
 name = "friendbank"
-paht = "src/main.rs"
+path = "api/main.rs"

@@ -1,42 +1,29 @@
-warning: field `username` is never read
-  --> src/models.rs:15:9
-   |
-13 | pub struct User {
-   |            ---- field in this struct
-14 |     pub id: i32,
-15 |     pub username: String,
-   |         ^^^^^^^^
-   |
-   = note: `User` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis
-   = note: `#[warn(dead_code)]` on by default
-
-warning: field `user_id` is never read
-  --> src/models.rs:23:9
-   |
-21 | pub struct Account {
-   |            ------- field in this struct
-22 |     pub id: i32,
-23 |     pub user_id: i32,
-   |         ^^^^^^^
-   |
-   = note: `Account` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis
-
-warning: function `verify_accountant_role` is never used
-  --> src/middleware/jwt_auth.rs:47:14
-   |
-47 | pub async fn verify_accountant_role(
-   |              ^^^^^^^^^^^^^^^^^^^^^^
-
-warning: `friendbank` (bin "friendbank") generated 3 warnings
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.08s
-     Running `target/debug/friendbank`
-DATABASE_URL: Ok("mysql://rust_user:cdfslADNsZp0Fa3X@localhost/friendbank")
-Connected to the database succesfully!
-DEBUG: Petición de retiro recibida.
-DEBUG: Llamando al servicio de retiro.
-DEBUG: Iniciando servicio de depósito.
-DEBUG: Transacción de base de datos iniciada.
-DEBUG: Usuario receptor encontrado con ID: 2
-DEBUG: Monto de depósito convertido a Decimal.
-DEBUG: Saldo de la cuenta actualizado con éxito.
-ERROR: Fallo al registrar la transacción: Database(MySqlDatabaseError { code: Some("23000"), number: 1048, message: "Column 'sender_id' cannot be null" })
+./target/debug/deps/friendbank-2ed2c2dccd59a92f.d:/home/alex/dev/friendbank/friendbank-bend/target/debug/deps/friendbank-2ed2c2dccd59a92f.d: api/main.rs api/models.rs api/api/mod.rs api/api/handlers/mod.rs api/api/handlers/login.rs api/api/handlers/signup.rs api/api/handlers/transaction.rs api/api/handlers/accountant/mod.rs api/api/handlers/accountant/deposit.rs api/api/handlers/accountant/withdraw.rs api/api/routes/mod.rs api/middleware/mod.rs api/middleware/jwt_auth.rs api/services/mod.rs api/services/user_service.rs api/services/transaction_service.rs api/services/accountant/mod.rs api/services/accountant/deposit.rs api/services/accountant/withdraw.rs
+./target/debug/deps/friendbank-2ed2c2dccd59a92f.d:/home/alex/dev/friendbank/friendbank-bend/target/debug/deps/friendbank-2ed2c2dccd59a92f: api/main.rs api/models.rs api/api/mod.rs api/api/handlers/mod.rs api/api/handlers/login.rs api/api/handlers/signup.rs api/api/handlers/transaction.rs api/api/handlers/accountant/mod.rs api/api/handlers/accountant/deposit.rs api/api/handlers/accountant/withdraw.rs api/api/routes/mod.rs api/middleware/mod.rs api/middleware/jwt_auth.rs api/services/mod.rs api/services/user_service.rs api/services/transaction_service.rs api/services/accountant/mod.rs api/services/accountant/deposit.rs api/services/accountant/withdraw.rs
+./target/debug/deps/friendbank-2ed2c2dccd59a92f.d:api/api/handlers/accountant/deposit.rs:
+./target/debug/deps/friendbank-2ed2c2dccd59a92f.d:api/services/accountant/deposit.rs:
+./target/debug/friendbank.d:/home/alex/dev/friendbank/friendbank-bend/target/debug/friendbank: /home/alex/dev/friendbank/friendbank-bend/api/api/handlers/accountant/deposit.rs /home/alex/dev/friendbank/friendbank-bend/api/api/handlers/accountant/mod.rs /home/alex/dev/friendbank/friendbank-bend/api/api/handlers/accountant/withdraw.rs /home/alex/dev/friendbank/friendbank-bend/api/api/handlers/login.rs /home/alex/dev/friendbank/friendbank-bend/api/api/handlers/mod.rs /home/alex/dev/friendbank/friendbank-bend/api/api/handlers/signup.rs /home/alex/dev/friendbank/friendbank-bend/api/api/handlers/transaction.rs /home/alex/dev/friendbank/friendbank-bend/api/api/mod.rs /home/alex/dev/friendbank/friendbank-bend/api/api/routes/mod.rs /home/alex/dev/friendbank/friendbank-bend/api/main.rs /home/alex/dev/friendbank/friendbank-bend/api/middleware/jwt_auth.rs /home/alex/dev/friendbank/friendbank-bend/api/middleware/mod.rs /home/alex/dev/friendbank/friendbank-bend/api/models.rs /home/alex/dev/friendbank/friendbank-bend/api/services/accountant/deposit.rs /home/alex/dev/friendbank/friendbank-bend/api/services/accountant/mod.rs /home/alex/dev/friendbank/friendbank-bend/api/services/accountant/withdraw.rs /home/alex/dev/friendbank/friendbank-bend/api/services/mod.rs /home/alex/dev/friendbank/friendbank-bend/api/services/transaction_service.rs /home/alex/dev/friendbank/friendbank-bend/api/services/user_service.rs
+./target/release/deps/friendbank-c750ff9ebb71e12c.d:/home/alex/dev/friendbank/friendbank-bend/target/release/deps/friendbank-c750ff9ebb71e12c.d: api/main.rs api/models.rs api/api/mod.rs api/api/handlers/mod.rs api/api/handlers/login.rs api/api/handlers/signup.rs api/api/handlers/transaction.rs api/api/handlers/accountant/mod.rs api/api/handlers/accountant/deposit.rs api/api/handlers/accountant/withdraw.rs api/api/routes/mod.rs api/middleware/mod.rs api/middleware/jwt_auth.rs api/services/mod.rs api/services/user_service.rs api/services/transaction_service.rs api/services/accountant/mod.rs api/services/accountant/deposit.rs api/services/accountant/withdraw.rs
+./target/release/deps/friendbank-c750ff9ebb71e12c.d:/home/alex/dev/friendbank/friendbank-bend/target/release/deps/friendbank-c750ff9ebb71e12c: api/main.rs api/models.rs api/api/mod.rs api/api/handlers/mod.rs api/api/handlers/login.rs api/api/handlers/signup.rs api/api/handlers/transaction.rs api/api/handlers/accountant/mod.rs api/api/handlers/accountant/deposit.rs api/api/handlers/accountant/withdraw.rs api/api/routes/mod.rs api/middleware/mod.rs api/middleware/jwt_auth.rs api/services/mod.rs api/services/user_service.rs api/services/transaction_service.rs api/services/accountant/mod.rs api/services/accountant/deposit.rs api/services/accountant/withdraw.rs
+./target/release/deps/friendbank-c750ff9ebb71e12c.d:api/api/handlers/accountant/deposit.rs:
+./target/release/deps/friendbank-c750ff9ebb71e12c.d:api/services/accountant/deposit.rs:
+./target/release/deps/friendbank-9e2cc43e2c5d6f31.d:/home/alex/dev/friendbank/friendbank-bend/target/release/deps/friendbank-9e2cc43e2c5d6f31.d: src/main.rs src/models.rs src/api/mod.rs src/api/handlers/mod.rs src/api/handlers/login.rs src/api/handlers/signup.rs src/api/handlers/transaction.rs src/api/handlers/accountant/mod.rs src/api/handlers/accountant/deposit.rs src/api/handlers/accountant/withdraw.rs src/api/routes/mod.rs src/middleware/mod.rs src/middleware/jwt_auth.rs src/services/mod.rs src/services/user_service.rs src/services/transaction_service.rs src/services/accountant/mod.rs src/services/accountant/deposit.rs src/services/accountant/withdraw.rs
+./target/release/deps/friendbank-9e2cc43e2c5d6f31.d:/home/alex/dev/friendbank/friendbank-bend/target/release/deps/friendbank-9e2cc43e2c5d6f31: src/main.rs src/models.rs src/api/mod.rs src/api/handlers/mod.rs src/api/handlers/login.rs src/api/handlers/signup.rs src/api/handlers/transaction.rs src/api/handlers/accountant/mod.rs src/api/handlers/accountant/deposit.rs src/api/handlers/accountant/withdraw.rs src/api/routes/mod.rs src/middleware/mod.rs src/middleware/jwt_auth.rs src/services/mod.rs src/services/user_service.rs src/services/transaction_service.rs src/services/accountant/mod.rs src/services/accountant/deposit.rs src/services/accountant/withdraw.rs
+./target/release/deps/friendbank-9e2cc43e2c5d6f31.d:src/api/handlers/accountant/deposit.rs:
+./target/release/deps/friendbank-9e2cc43e2c5d6f31.d:src/services/accountant/deposit.rs:
+./target/release/friendbank.d:/home/alex/dev/friendbank/friendbank-bend/target/release/friendbank: /home/alex/dev/friendbank/friendbank-bend/api/api/handlers/accountant/deposit.rs /home/alex/dev/friendbank/friendbank-bend/api/api/handlers/accountant/mod.rs /home/alex/dev/friendbank/friendbank-bend/api/api/handlers/accountant/withdraw.rs /home/alex/dev/friendbank/friendbank-bend/api/api/handlers/login.rs /home/alex/dev/friendbank/friendbank-bend/api/api/handlers/mod.rs /home/alex/dev/friendbank/friendbank-bend/api/api/handlers/signup.rs /home/alex/dev/friendbank/friendbank-bend/api/api/handlers/transaction.rs /home/alex/dev/friendbank/friendbank-bend/api/api/mod.rs /home/alex/dev/friendbank/friendbank-bend/api/api/routes/mod.rs /home/alex/dev/friendbank/friendbank-bend/api/main.rs /home/alex/dev/friendbank/friendbank-bend/api/middleware/jwt_auth.rs /home/alex/dev/friendbank/friendbank-bend/api/middleware/mod.rs /home/alex/dev/friendbank/friendbank-bend/api/models.rs /home/alex/dev/friendbank/friendbank-bend/api/services/accountant/deposit.rs /home/alex/dev/friendbank/friendbank-bend/api/services/accountant/mod.rs /home/alex/dev/friendbank/friendbank-bend/api/services/accountant/withdraw.rs /home/alex/dev/friendbank/friendbank-bend/api/services/mod.rs /home/alex/dev/friendbank/friendbank-bend/api/services/transaction_service.rs /home/alex/dev/friendbank/friendbank-bend/api/services/user_service.rs
+./api/services/accountant/deposit.rs:// src/services/accountant/deposit.rs
+./api/services/accountant/deposit.rs:pub async fn process_deposit(
+./api/services/accountant/deposit.rs:    let deposit_amount = Decimal::from_f64(data.amount)
+./api/services/accountant/deposit.rs:        deposit_amount,
+./api/services/accountant/deposit.rs:        deposit_amount
+./api/services/accountant/deposit.rs:        deposit_amount
+./api/services/accountant/deposit.rs:        "INSERT INTO audit_log (amount, type, accountant_user_id) VALUES (?, 'deposit', ?)",
+./api/services/accountant/deposit.rs:        deposit_amount,
+./api/services/accountant/mod.rs:pub mod deposit;
+./api/api/routes/mod.rs:        .service(accountant::deposit::deposit)
+./api/api/handlers/accountant/deposit.rs:use crate::services::accountant::deposit as accountant_deposit;
+./api/api/handlers/accountant/deposit.rs:#[post("/deposit")]
+./api/api/handlers/accountant/deposit.rs:pub async fn deposit(
+./api/api/handlers/accountant/deposit.rs:    match accountant_deposit::process_deposit(&pool.db, claims.sub, &data).await {
+./api/api/handlers/accountant/mod.rs:pub mod deposit;
